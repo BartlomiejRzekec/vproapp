@@ -5,7 +5,7 @@ metadata:
   labels:
     app: vprodb
 spec:
-  selectors:
+  selector:
     matchLabels:
       app: vprodb
   replicas: 1
