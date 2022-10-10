@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: memcachedep
   labels:
     name: vpromemcache
 spec:
@@ -17,5 +18,5 @@ spec:
         - name: memchachepod
           image: memcached
           ports:
-            - name: memcachePort
+            - name: memcacheport
               containerPort: 11211

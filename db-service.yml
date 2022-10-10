@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: vprodb
 spec:
-  type: ClusterIp
+  type: ClusterIP
   ports:
   - targetPort: 3306
     port: 3306
