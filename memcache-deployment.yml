@@ -17,5 +17,5 @@ spec:
         - name: memchachepod
           image: memcached
           ports:
-            - name: memcachePort
+            - name: memcacheport
               containerPort: 11211
