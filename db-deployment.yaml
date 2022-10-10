@@ -27,8 +27,6 @@ spec:
                 secretKeyRef:
                   name: app-secret
                   key: db-pass
-          args:
-            - "--ignore-db-dir=lost+found"
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: db-volume
@@ -36,8 +34,9 @@ spec:
         zone: eu-central-1a
       volumes:
         - name: db-volume
-          awsElasticBlockStore:
-            volumeID: vol-0556a5a5dfe1c858f
-            fsType: ext4
+          hostPath:
+            path: /home/vagrant/db-backup
+            type: Directory
+
 
 
