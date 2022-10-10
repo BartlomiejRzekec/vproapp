@@ -9,4 +9,4 @@ spec:
       targetPort: 15672
       protocol: TCP
   selector:
-    name: rabbitMqPod
+    name: rabbitmqpod

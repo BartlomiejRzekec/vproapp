@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rmqDeployment
+  name: rmqdeployment
 spec:
   selector:
     matchLabels:
-      name: rabbitMqPod
+      name: rabbitmqpod
   replicas: 1
   template:
     metadata:
       labels:
-        name: rabbitMqPod
+        name: rabbitmqpod
     spec:
       containers:
-        - name: rabbitMq
+        - name: rabbitmq
           image: rabbitmq
           ports:
-            - name: RMQport
+            - name: rmqport
               containerPort: 15672
           env:
             - name: RABBITMQ_DEFAULT_USER
