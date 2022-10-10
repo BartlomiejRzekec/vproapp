@@ -16,10 +16,11 @@ spec:
         app: vprodb
     spec:
       containers:
-        - name: db
+        - name: dbpod
           image: bartlomiejrzekec/vprofiledb:v1
           ports:
-            - containerPort: 3306
+            - name: db-port
+              containerPort: 3306
           env:
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
