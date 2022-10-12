@@ -7,13 +7,13 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: vprodb
+      app: vprodbpod
   replicas: 1
   template:
     metadata:
       name: db-pod
       labels:
-        app: vprodb
+        app: vprodbpod
     spec:
       containers:
         - name: dbpod
